@@ -1,6 +1,6 @@
 'use strict';
 
-const GuildChannel = require('./GuildChannel');
+const TextChannel = require('./TextChannel');
 const { Error } = require('../errors');
 const Collection = require('../util/Collection');
 const { browser } = require('../util/Constants');
@@ -8,9 +8,9 @@ const Permissions = require('../util/Permissions');
 
 /**
  * Represents a guild voice channel on Discord.
- * @extends {GuildChannel}
+ * @extends {TextChannel}
  */
-class VoiceChannel extends GuildChannel {
+class VoiceChannel extends TextChannel {
   _patch(data) {
     super._patch(data);
     /**
